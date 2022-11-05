@@ -8,7 +8,9 @@ You can run this as a one-off using `nix run github:maddiethecafebabe/SysDVR-nix
 
 # Installation
 
-If you manage your system with flakes you can add `github:maddiethecafebabe/SysDVR-nix` as an input. Then in your configuration.nix (or any file included by it) it should be as simple as ```nix
+If you manage your system with flakes you can add `github:maddiethecafebabe/SysDVR-nix` as an input. Then in your configuration.nix (or any file included by it) it should be as simple as
+
+```nix
 { inputs, ... }: 
 {
     imports = [inputs.SysDVR-nix.nixosModules.default];
@@ -16,6 +18,7 @@ If you manage your system with flakes you can add `github:maddiethecafebabe/SysD
     hardware.sysdvr.enable = true;
 }
 ```
+
 By default this will also setup udev rules so it can access the switch over usb, you may need to `sudo udevadm trigger` + plug out and plug in the switch, logout or reboot for those to take effect - in decreasing order of "it doesnt work what do i try next".
 
 # Credits
