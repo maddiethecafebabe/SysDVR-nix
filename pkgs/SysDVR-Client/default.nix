@@ -21,6 +21,7 @@ buildDotnetModule rec {
       repo = "SysDVR";
       rev = "${version}";
       hash = "sha256-SYVipagklX27IWRQiL12ct/Lr8LP5tJUgQhG62iqHZE=";
+      name = "${pname}-git-${version}";
     }
     + "/Client";
 
